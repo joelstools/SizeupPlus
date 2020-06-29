@@ -87,8 +87,9 @@ on parseScriptName(name)
 		
 		repeat with rangeIndex from 1 to numRanges - 1
 			set partRange to (aMatch's rangeAtIndex:rangeIndex) as record
-			if partRange's location is not NSNotFound then ¬
+			if partRange's location is not NSNotFound then
 				set item rangeIndex of parts to text ((partRange's location) + 1) thru ((partRange's location) + (partRange's |length|)) of name
+            end if
 		end repeat
 	end repeat
 	
